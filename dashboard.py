@@ -4,9 +4,12 @@ from src.plots import scatter_with_labels
 
 st.set_page_config(page_title="Football Analytics Dashboard", layout="wide")
 
-st.title("Football Analytics Dashboard")
-st.write("Scatter plots for Shots, xG, and Goals data.")
-
+st.title("Doncaster Rovers Dashboard")
+st.write("Basic analysis of Doncaster Rovers in EFL League One 2025/25.  This shows an indicator of both performance and outcomes.")
+st.write("Performance is determined through two sets of metrics:")
+st.write("- **Frequency** - the volume of shots created or conceded.")
+st.write("- **Quality** - the quality of shots created or conceded measured by the expected goals (xG and xGA).")
+st.write("Outcomes are determined through the conversion of the shots into goals.  This is measured by goals for and against. ")
 
 # --------------------------
 # Load data from JSON file
