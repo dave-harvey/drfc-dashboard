@@ -5,11 +5,20 @@ from src.plots import scatter_with_labels
 st.set_page_config(page_title="Football Analytics Dashboard", layout="wide")
 
 st.title("Doncaster Rovers Dashboard")
-st.write("Basic analysis of Doncaster Rovers in EFL League One 2025/25.  This shows an indicator of both performance and outcomes.")
-st.write("Performance is determined through two sets of metrics:")
-st.write("- **Frequency** - the volume of shots created or conceded.")
-st.write("- **Quality** - the quality of shots created or conceded measured by the expected goals (xG and xGA).")
-st.write("Outcomes are determined through the conversion of the shots into goals.  This is measured by goals for and against. ")
+
+st.write("This dashboard provides an overview of Doncaster Rovers’ performances in EFL League One during the 2025/26 season.")
+st.write("It highlights two key areas: performance and outcomes.")
+
+st.write("**Performance** is assessed through:")
+st.write("- **Frequency** – how often Doncaster Rovers create shots and how many they allow the opposition to take.")
+st.write("- **Quality** – the quality of those chances, measured using expected goals (xG) for and expected goals against (xGA).")
+
+st.write("**Outcomes** are reflected in:")
+st.write("- **Conversion** – the goals scored and conceded, showing how effectively chances are taken and prevented.")
+
+st.write("Together, these measures offer a clear picture of how the team is performing and how that performance translates into results.")
+
+st.write("Data reflects matches played up to and including 9 December 2025.")
 
 # --------------------------
 # Load data from JSON file
@@ -46,6 +55,8 @@ tab_freq, tab_qual, tab_conv = st.tabs(["Frequency", "Quality", "Conversion"])
 
 with tab_freq:
     st.subheader("Frequency — Shot Volume")
+    st.write("This chart shows how often Doncaster Rovers create shots and how many they allow the opposition to take. It reflects the team’s overall attacking and defensive activity.")
+
     fig = scatter_with_labels(
         df=df,
         x="Shots",
@@ -60,6 +71,8 @@ with tab_freq:
 
 with tab_qual:
     st.subheader("Quality — Expected Goals")
+    st.write("This chart shows the quality of chances created and conceded, using expected goals (xG) for and expected goals against (xGA). It indicates how dangerous Doncaster Rovers are in attack and how well they limit opposition chances.")
+
     fig = scatter_with_labels(
         df=df,
         x="xG",
@@ -74,6 +87,8 @@ with tab_qual:
 
 with tab_conv:
     st.subheader("Conversion — Goals vs Goals Against")
+    st.write("This chart shows goals scored and conceded, illustrating how effectively Doncaster Rovers convert their chances and prevent the opposition from scoring.")
+
     fig = scatter_with_labels(
         df=df,
         x="Goals",
