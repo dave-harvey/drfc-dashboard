@@ -53,7 +53,7 @@ with tab_freq:
         highlight_team=team_to_highlight,
         figsize=(10, 7),
     )
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
 
 with tab_qual:
     st.subheader("Quality — Expected Goals")
@@ -67,7 +67,7 @@ with tab_qual:
         highlight_team=team_to_highlight,
         figsize=(10, 7),
     )
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
 
 with tab_conv:
     st.subheader("Conversion — Goals vs Goals Against")
@@ -81,4 +81,4 @@ with tab_conv:
         highlight_team=team_to_highlight,
         figsize=(10, 7),
     )
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
