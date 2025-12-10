@@ -92,9 +92,13 @@ def scatter_with_labels(
         arrowprops=dict(arrowstyle="-", lw=0.5, color="gray", alpha=0.8),
     )
 
+    # Reduce border (spine) thickness
+    for spine in ax.spines.values():
+        spine.set_linewidth(0.5)
+
     # Mean reference lines
-    ax.axvline(df_plot[x].mean(), ls="--", color="gray", lw=1)
-    ax.axhline(df_plot[y].mean(), ls="--", color="gray", lw=1)
+    ax.axvline(df_plot[x].mean(), ls="--", color="gray", lw=0.5)
+    ax.axhline(df_plot[y].mean(), ls="--", color="gray", lw=0.5)
 
     # Friendly axis labels (fallback to raw names)
     ax.set_xlabel(xLabel if xLabel else x)
