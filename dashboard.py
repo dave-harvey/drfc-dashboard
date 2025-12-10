@@ -33,8 +33,8 @@ df = load_data()
 # --------------------------
 # Optional: team to highlight (sidebar)
 # --------------------------
-team_to_highlight = st.sidebar.selectbox("Highlight a team", df["Team"].unique())
-
+#team_to_highlight = st.sidebar.selectbox("Highlight a team", df["Team"].unique())
+team_to_highlight = "Doncaster Rovers"
 
 # --------------------------
 # Tabs for the three views
