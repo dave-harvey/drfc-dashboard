@@ -6,19 +6,21 @@ st.set_page_config(page_title="Football Analytics Dashboard", layout="wide")
 
 st.title("Doncaster Rovers Dashboard")
 
-st.write("This dashboard provides an overview of Doncaster Rovers’ performances in EFL League One during the 2025/26 season.")
-st.write("It highlights two key areas: performance and outcomes.")
+st.markdown("""
+This dashboard provides an overview of Doncaster Rovers’ performances in EFL League One during the 2025/26 season.
+It highlights two key areas: **performance** and **outcomes**.
 
-st.write("**Performance** is assessed through:")
-st.write("- **Frequency** – how often Doncaster Rovers create shots and how many they allow the opposition to take.")
-st.write("- **Quality** – the quality of those chances, measured using expected goals (xG) for and expected goals against (xGA).")
+**Performance** is assessed through:
+- **Frequency** – how often Doncaster Rovers create shots and how many they allow the opposition to take.
+- **Quality** – the quality of those chances, measured using expected goals (xG) for and expected goals against (xGA).
 
-st.write("**Outcomes** are reflected in:")
-st.write("- **Conversion** – the goals scored and conceded, showing how effectively chances are taken and prevented.")
+**Outcomes** are reflected in:
+- **Conversion** – the goals scored and conceded, showing how effectively chances are taken and prevented.
 
-st.write("Together, these measures offer a clear picture of how the team is performing and how that performance translates into results.")
+Together, these measures offer a clear picture of how the team is performing and how that performance translates into results.
 
-st.write("Data reflects matches played up to and including 9 December 2025.")
+_Data reflects matches played up to and including 9 December 2025._
+""")
 
 # --------------------------
 # Load data from JSON file
