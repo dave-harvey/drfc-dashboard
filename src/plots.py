@@ -82,7 +82,7 @@ def scatter_with_labels(
                 row[x],
                 row[y],
                 row["Team"],
-                fontsize=6,
+                fontsize=4,
             )
         )
 
@@ -94,7 +94,7 @@ def scatter_with_labels(
 
     # Reduce border (spine) thickness
     for spine in ax.spines.values():
-        spine.set_linewidth(0.5)
+        spine.set_linewidth(0.7)
 
     # Mean reference lines
     ax.axvline(df_plot[x].mean(), ls="--", color="gray", lw=0.5)
