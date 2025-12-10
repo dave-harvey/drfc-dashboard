@@ -37,7 +37,7 @@ df = load_data()
 # Select team to highlight
 # --------------------------
 #team_to_highlight = st.sidebar.selectbox("Highlight a team", df["Team"].unique())
-team_to_highlight = "Doncater Rovers"
+team_to_highlight = "Doncaster Rovers"
 
 
 # --------------------------
