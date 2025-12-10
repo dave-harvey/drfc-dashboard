@@ -7,22 +7,20 @@ st.set_page_config(page_title="Football Analytics Dashboard", layout="wide")
 st.title("Doncaster Rovers Dashboard")
 
 st.markdown("""
-This dashboard provides an overview of Doncaster Rovers’ performances in EFL League One during the 2025/26 season.
-It highlights two key areas: **performance** and **outcomes**.
+This dashboard summarises Doncaster Rovers’ performances in EFL League One during the 2025/26 season, focusing on two areas: **performance** and **outcomes**.
 
-**Performance** is assessed through:
-- **Frequency** – how often Doncaster Rovers create shots and how many they allow the opposition to take.
-- **Quality** – the quality of those chances, measured using expected goals (xG) for and expected goals against (xGA).
+**Performance** covers:
+- **Frequency** – how often Rovers create shots and how many they concede.
+- **Quality** – the standard of those chances, using expected goals (xG) for and expected goals against (xGA).
 
-**Outcomes** are reflected in:
-- **Conversion** – the goals scored and conceded, showing how effectively chances are taken and prevented.
+**Outcomes** reflect:
+- **Conversion** – goals scored and conceded, showing how effectively chances are taken and prevented.
 
-Together, these measures offer a clear picture of how the team is performing and how that performance translates into results.
-
-Each chart is divided into four quadrants. In general, teams in the **bottom-right** quadrant tend to be in the strongest position, combining positive attacking output with solid defensive performance. Teams in the **top-right** or **bottom-left** quadrants can still perform well, as they typically show strength in one area and weakness in another. The **top-left** quadrant usually highlights teams that are struggling, as it reflects below-average attacking output along with above-average defensive exposure.
+Each chart is divided into four quadrants. The **bottom-right** generally indicates the strongest position, combining positive attacking output with solid defensive performance. The **top-right** and **bottom-left** can still represent effective styles, while the **top-left** typically highlights teams struggling at both ends of the pitch.
 
 _Data reflects matches played up to and including 9 December 2025._
 """)
+
 
 # --------------------------
 # Load data from JSON file
