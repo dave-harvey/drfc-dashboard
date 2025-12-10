@@ -17,11 +17,7 @@ It highlights two key areas: **performance** and **outcomes**.
 **Outcomes** are reflected in:
 - **Conversion** – the goals scored and conceded, showing how effectively chances are taken and prevented.
 
-Together, these measures offer a clear picture of how the team is performing and how that performance translates into results.
-
-Each chart is divided into four quadrants. In general, teams in the **bottom-right** quadrant tend to be in the strongest position, combining positive attacking output with solid defensive performance.
-
-Teams in the **top-right** or **bottom-left** quadrants can still perform well, as they typically show strength in one area and weakness in another.
+Together, these measures offer a clear picture of how the team is performing and how that performance translates into results. Each chart is divided into four quadrants. In general, teams in the **bottom-right** quadrant tend to be in the strongest position, combining positive attacking output with solid defensive performance. Teams in the **top-right** or **bottom-left** quadrants can still perform well, as they typically show strength in one area and weakness in another.
 
 The **top-left** quadrant usually highlights teams that are struggling, as it reflects below-average attacking output along with above-average defensive exposure.
 
