@@ -51,7 +51,7 @@ with tab_freq:
         xLabel="Shots For (per match)",
         yLabel="Shots Against (per match)",
         highlight_team=team_to_highlight,
-        figsize=(6, 4),
+        figsize=(8, 6),
     )
     st.pyplot(fig, use_container_width=False)
 
