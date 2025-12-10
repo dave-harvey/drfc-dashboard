@@ -48,8 +48,8 @@ with tab_freq:
         x="Shots",
         y="Shots_Against",
         title="Shots vs Shots Against",
-        xLabel="Shots For (per match)",
-        yLabel="Shots Against (per match)",
+        xLabel="Shots / 90",
+        yLabel="Shots Against / 90",
         highlight_team=team_to_highlight,
         figsize=(7, 5),
     )
@@ -62,10 +62,10 @@ with tab_qual:
         x="xG",
         y="xGA",
         title="xG vs xGA",
-        xLabel="xG (Expected Goals For, per match)",
-        yLabel="xGA (Expected Goals Against, per match)",
+        xLabel="xG / 90",
+        yLabel="xGA / 90",
         highlight_team=team_to_highlight,
-        figsize=(10, 7),
+        figsize=(7, 5),
     )
     st.pyplot(fig, use_container_width=False)
 
@@ -76,9 +76,9 @@ with tab_conv:
         x="Goals",
         y="Goals_Against",
         title="Goals vs Goals Against",
-        xLabel="Goals Scored (per match)",
-        yLabel="Goals Conceded (per match)",
+        xLabel="Goals / 90",
+        yLabel="Goals Against / 90",
         highlight_team=team_to_highlight,
-        figsize=(10, 7),
+        figsize=(7, 5),
     )
     st.pyplot(fig, use_container_width=False)
