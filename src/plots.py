@@ -82,7 +82,7 @@ def scatter_with_labels(
                 row[x],
                 row[y],
                 row["Team"],
-                fontsize=6,
+                fontsize=4,
             )
         )
 
