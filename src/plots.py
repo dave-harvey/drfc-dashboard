@@ -52,11 +52,11 @@ def scatter_with_labels(
             {True: "crimson", False: "royalblue"}
         )
         df_plot["_size"] = df_plot["Team"].eq(highlight_team).map(
-            {True: 120, False: 50}
+            {True: 50, False: 20}
         )
     else:
         df_plot["_color"] = "royalblue"
-        df_plot["_size"] = 50
+        df_plot["_size"] = 20
 
     fig, ax = plt.subplots(figsize=figsize)
 
@@ -67,7 +67,7 @@ def scatter_with_labels(
         hue="_color" if highlight_team else None,
         palette=["royalblue", "crimson"] if highlight_team else None,
         size="_size",
-        sizes=(50, 120),
+        sizes=(20, 50),
         legend=False,
         edgecolor="black",
         linewidth=0.4,
