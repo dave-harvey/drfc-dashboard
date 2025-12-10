@@ -81,7 +81,8 @@ def scatter_with_labels(
             ax.text(
                 row[x],
                 row[y],
-                row["Team"]
+                row["Team"],
+                fontsize=6,
             )
         )
 
