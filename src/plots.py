@@ -5,8 +5,7 @@ from adjustText import adjust_text
 from typing import Optional, Tuple
 
 # Global style
-sns.set_theme(context="talk", style="white")
-
+sns.set_theme(context="talk", style="white", font_scale=0.7)
 
 def scatter_with_labels(
     df: pd.DataFrame,
