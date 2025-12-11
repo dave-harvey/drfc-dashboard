@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from src.plots import scatter_with_labels
 
-st.set_page_config(page_title="Football Analytics Dashboard", layout="wide")
+st.set_page_config(page_title="Donny Dashboard", layout="wide")
 
 st.title("Doncaster Rovers Dashboard")
 
