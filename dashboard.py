@@ -69,7 +69,7 @@ with tab_freq:
         highlight_team=team_to_highlight,
         figsize=(6, 6),
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=False)
 
 with tab_qual:
     st.subheader("Quality — Expected Goals")
