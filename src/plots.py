@@ -46,7 +46,7 @@ def scatter_with_labels(
             {True: "Highlight", False: "Other"}
         )
         df_plot["_size"] = df_plot["_highlight"].map(
-            {True: 18, False: 10}   # highlight bigger marker
+            {True: 12, False: 6}   # highlight bigger marker
         )
         color_col = "_group"
         color_map = {"Other": "#4169E1", "Highlight": "#DC143C"}  # royalblue / crimson
@@ -71,7 +71,7 @@ def scatter_with_labels(
         color=color_col,
         color_discrete_map=color_map,
         size="_size",
-        size_max=18,
+        size_max=12,
         hover_name="Team",        # big name at top of hover
         hover_data=hover_cols,    # show underlying stats
         text="Team",              # label points with team name
