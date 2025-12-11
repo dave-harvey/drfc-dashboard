@@ -83,9 +83,14 @@ def scatter_with_labels(
         xaxis_title=xLabel if xLabel else x,
         yaxis_title=yLabel if yLabel else y,
         showlegend=False,
-        width=width,
-        height=height,
+        #width=width,
+        #height=height,
         margin=dict(l=40, r=20, t=60, b=40),
+    )
+
+    fig.update_yaxes(
+        scaleanchor="x",
+        scaleratio=1,
     )
 
     # Position + style for text labels on the plot
@@ -94,6 +99,9 @@ def scatter_with_labels(
         textfont=dict(size=9),
         marker=dict(line=dict(width=0.5, color="black")),
     )
+
+    fig.update_layout(autosize=True)
+
 
     # Quadrant mean lines
     x_mean = df_plot[x].mean()
