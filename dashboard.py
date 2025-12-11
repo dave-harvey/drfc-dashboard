@@ -67,9 +67,9 @@ with tab_freq:
         xLabel="Shots / 90",
         yLabel="Shots Against / 90",
         highlight_team=team_to_highlight,
-        figsize=(6, 6),
+        figsize=(6, 8),
     )
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 with tab_qual:
     st.subheader("Quality — Expected Goals")
