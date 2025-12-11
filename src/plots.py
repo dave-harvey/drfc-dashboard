@@ -100,9 +100,6 @@ def scatter_with_labels(
         marker=dict(line=dict(width=0.5, color="black")),
     )
 
-    fig.update_layout(autosize=True)
-
-
     # Quadrant mean lines
     x_mean = df_plot[x].mean()
     y_mean = df_plot[y].mean()
