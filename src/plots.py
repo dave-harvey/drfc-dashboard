@@ -2,8 +2,6 @@ import pandas as pd
 from typing import Optional, Tuple
 import plotly.express as px
 
-# Global style
-sns.set_theme(context="talk", style="white", font_scale=0.4)
 
 def scatter_with_labels(
     df: pd.DataFrame,
