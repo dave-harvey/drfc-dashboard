@@ -83,14 +83,8 @@ def scatter_with_labels(
         xaxis_title=xLabel if xLabel else x,
         yaxis_title=yLabel if yLabel else y,
         showlegend=False,
-        #width=width,
-        #height=height,
+        height=600,
         margin=dict(l=40, r=20, t=60, b=40),
-    )
-
-    fig.update_yaxes(
-        scaleanchor="x",
-        scaleratio=1,
     )
 
     # Position + style for text labels on the plot
