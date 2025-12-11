@@ -67,7 +67,7 @@ with tab_freq:
         xLabel="Shots / 90",
         yLabel="Shots Against / 90",
         highlight_team=team_to_highlight,
-        figsize=(7, 5),
+        figsize=(6, 6),
     )
     st.plotly_chart(fig, use_container_width=True)
 
