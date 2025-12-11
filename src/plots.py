@@ -83,7 +83,7 @@ def scatter_with_labels(
         xaxis_title=xLabel if xLabel else x,
         yaxis_title=yLabel if yLabel else y,
         showlegend=False,
-        height=600,
+        height=500,
         margin=dict(l=40, r=20, t=60, b=40),
     )
 
