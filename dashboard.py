@@ -59,7 +59,7 @@ with tab_freq:
     st.subheader("Frequency — Shot Volume")
     st.write("This chart shows how often Doncaster Rovers create shots and how many they allow the opposition to take. It reflects the team’s overall attacking and defensive activity.")
 
-    fig = scatter_plot(
+    scatter_plot(
         df=df,
         x="Shots",
         y="Shots_Against",
@@ -77,7 +77,7 @@ with tab_qual:
     st.subheader("Quality — Expected Goals")
     st.write("This chart shows the quality of chances created and conceded, using expected goals (xG) for and expected goals against (xGA). It indicates how dangerous Doncaster Rovers are in attack and how well they limit opposition chances.")
 
-    fig = scatter_plot(
+    scatter_plot(
         df=df,
         x="xG",
         y="xGA",
@@ -95,7 +95,7 @@ with tab_conv:
     st.subheader("Conversion — Goals vs Goals Against")
     st.write("This chart shows goals scored and conceded, illustrating how effectively Doncaster Rovers convert their chances and prevent the opposition from scoring.")
 
-    fig = scatter_plot(
+    scatter_plot(
         df=df,
         x="Goals",
         y="Goals_Against",
