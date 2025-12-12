@@ -185,15 +185,14 @@ def scatter_plot(
     options = ["Interactive", "Static"]
     default_index = 0 if interactive_default else 1
 
-    chart_type = st.radio(
-        "Chart type:",
-        options,
-        index=default_index,
-        horizontal=True,
-        key=key,
+
+    interactive = st.toggle(
+        "Interactive chart",
+        value=interactive_default,
+        key=key
     )
 
-    if chart_type == "Interactive":
+    if interactive:
         fig = _scatter_plotly(
             df=df,
             x=x,
