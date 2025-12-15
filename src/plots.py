@@ -168,10 +168,8 @@ def scatter_plot(
     xLabel: Optional[str] = None,
     yLabel: Optional[str] = None,
     highlight_team: Optional[str] = None,
-    figsize: Tuple[int, int] = (6, 6),
+    figsize: Tuple[int, int] = (7, 5),
     interactive: bool = True,
-    key: Optional[str] = None,
-    use_container_width: bool = True,
 ):
     """
     Renders a scatter plot in Streamlit using either Plotly (interactive)

@@ -72,9 +72,7 @@ with tab_freq:
         xLabel="Shots / 90",
         yLabel="Shots Against / 90",
         highlight_team=team_to_highlight,
-        figsize=(6, 8),
         interactive=interactive,
-        use_container_width=True,
     )
 
 with tab_qual:
@@ -89,9 +87,7 @@ with tab_qual:
         xLabel="xG / 90",
         yLabel="xGA / 90",
         highlight_team=team_to_highlight,
-        figsize=(7, 5),
         interactive=interactive,
-        use_container_width=True,
     )
 
 with tab_conv:
@@ -106,8 +102,6 @@ with tab_conv:
         xLabel="Goals / 90",
         yLabel="Goals Against / 90",
         highlight_team=team_to_highlight,
-        figsize=(7, 5),
         interactive=interactive,
-        use_container_width=True,
     )
 
