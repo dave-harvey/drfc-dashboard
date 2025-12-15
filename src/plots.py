@@ -32,7 +32,7 @@ def _scatter_plotly(
             {True: "Highlight", False: "Other"}
         )
         df_plot["_size"] = df_plot["_highlight"].map(
-            {True: 12, False: 6}   # tweak sizes here
+            {True: 12, False: 6}
         )
         color_col = "_group"
         color_map = {"Other": "#4169E1", "Highlight": "#DC143C"}
@@ -42,9 +42,16 @@ def _scatter_plotly(
         color_col = None
         color_map = None
 
-    # Hover: show all useful columns except internals
-    hover_exclude = {"_highlight", "_group", "_size"}
-    hover_cols: List[str] = [c for c in df_plot.columns if c not in hover_exclude]
+    # CUSTOM HOVER — only show team + 2 values
+    hovertemplate = (
+        "<b>%{customdata[0]}</b><br>"  # Team name
+        f"{xLabel or x}: %{x}<br>"     # X value
+        f"{yLabel or y}: %{y}<br>"     # Y value
+        "<extra></extra>"              # Hide secondary box
+    )
+
+    # Add customdata → pass team name into hovertemplate
+    df_plot["custom_team"] = df_plot["Team"]
 
     fig = px.scatter(
         df_plot,
@@ -54,10 +61,13 @@ def _scatter_plotly(
         color_discrete_map=color_map,
         size="_size",
         size_max=12,
-        hover_name="Team",
-        hover_data=hover_cols,
-        text="Team",        # labels on points
+        hover_name=None,     # we will use custom hover instead
+        hover_data=None,     # disable automatic hover
+        custom_data=["custom_team"],  # pass team name into hovertemplate
     )
+
+    # Apply hovertemplate
+    fig.update_traces(hovertemplate=hovertemplate)
 
     # Layout
     fig.update_layout(
@@ -67,13 +77,6 @@ def _scatter_plotly(
         showlegend=False,
         height=height,
         margin=dict(l=40, r=20, t=60, b=40),
-    )
-
-    # Label styling & marker outline
-    fig.update_traces(
-        textposition="top center",
-        textfont=dict(size=9),
-        marker=dict(line=dict(width=0.5, color="black")),
     )
 
     # Quadrant lines
