@@ -69,8 +69,8 @@ with tab_freq:
         x="Shots",
         y="Shots_Against",
         title="Shots vs Shots Against",
-        xLabel="Shots / 90",
-        yLabel="Shots Against / 90",
+        xLabel="Shots/90",
+        yLabel="Shots Against/90",
         highlight_team=team_to_highlight,
         interactive=interactive,
     )
@@ -84,8 +84,8 @@ with tab_qual:
         x="xG",
         y="xGA",
         title="xG vs xGA",
-        xLabel="xG / 90",
-        yLabel="xGA / 90",
+        xLabel="xG/90",
+        yLabel="xGA/90",
         highlight_team=team_to_highlight,
         interactive=interactive,
     )
@@ -99,8 +99,8 @@ with tab_conv:
         x="Goals",
         y="Goals_Against",
         title="Goals vs Goals Against",
-        xLabel="Goals / 90",
-        yLabel="Goals Against / 90",
+        xLabel="Goals/90",
+        yLabel="Goals Against/90",
         highlight_team=team_to_highlight,
         interactive=interactive,
     )
