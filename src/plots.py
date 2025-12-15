@@ -42,16 +42,21 @@ def _scatter_plotly(
         color_col = None
         color_map = None
 
-    # CUSTOM HOVER — only show team + 2 values
-    hovertemplate = (
-        "<b>%{customdata[0]}</b><br>"  # Team name
-        f"{xLabel or x}: %{x}<br>"     # X value
-        f"{yLabel or y}: %{y}<br>"     # Y value
-        "<extra></extra>"              # Hide secondary box
-    )
-
     # Add customdata → pass team name into hovertemplate
     df_plot["custom_team"] = df_plot["Team"]
+
+    # Build hovertemplate carefully so %{x} / %{y} survive
+    x_label_text = xLabel or x
+    y_label_text = yLabel or y
+
+    hovertemplate = (
+        "<b>%{customdata[0]}</b><br>"
+        + x_label_text
+        + ": %{x}<br>"
+        + y_label_text
+        + ": %{y}<br>"
+        "<extra></extra>"
+    )
 
     fig = px.scatter(
         df_plot,
@@ -61,19 +66,19 @@ def _scatter_plotly(
         color_discrete_map=color_map,
         size="_size",
         size_max=12,
-        hover_name=None,     # we will use custom hover instead
-        hover_data=None,     # disable automatic hover
-        custom_data=["custom_team"],  # pass team name into hovertemplate
+        hover_name=None,          # we control hover ourselves
+        hover_data=None,          # disable automatic extra fields
+        custom_data=["custom_team"],
     )
 
-    # Apply hovertemplate
+    # Apply custom hover
     fig.update_traces(hovertemplate=hovertemplate)
 
     # Layout
     fig.update_layout(
         title=title,
-        xaxis_title=xLabel if xLabel else x,
-        yaxis_title=yLabel if yLabel else y,
+        xaxis_title=x_label_text,
+        yaxis_title=y_label_text,
         showlegend=False,
         height=height,
         margin=dict(l=40, r=20, t=60, b=40),
