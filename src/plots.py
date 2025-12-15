@@ -169,7 +169,7 @@ def scatter_plot(
     yLabel: Optional[str] = None,
     highlight_team: Optional[str] = None,
     figsize: Tuple[int, int] = (6, 6),
-    interactive: bool = False,
+    interactive_default: bool = True,
     key: Optional[str] = None,
     use_container_width: bool = True,
 ):
@@ -182,6 +182,15 @@ def scatter_plot(
     - generating the appropriate figure
     - rendering it in the app
     """
+    #options = ["Interactive", "Static"]
+    #default_index = 0 if interactive_default else 1
+
+
+    interactive = st.toggle(
+        "Interactive chart",
+        value=interactive_default,
+        key=key
+    )
 
     if interactive:
         fig = _scatter_plotly(
