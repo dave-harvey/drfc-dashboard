@@ -44,16 +44,11 @@ def load_data():
 
 df = load_data()
 
+# --------------------------
+# Optional: team to highlight (sidebar)
+# --------------------------
+#team_to_highlight = st.sidebar.selectbox("Highlight a team", df["Team"].unique())
 team_to_highlight = "Doncaster Rovers"
-
-
-options = ["Interactive", "Static"]
-
-
-interactive = st.toggle(
-    "Interactive chart",
-    value=False
-)
 
 
 # --------------------------
@@ -74,7 +69,7 @@ with tab_freq:
         yLabel="Shots Against / 90",
         highlight_team=team_to_highlight,
         figsize=(6, 8),
-        interactive=True,
+        interactive_default=True,
         key="freq_chart",
         use_container_width=True,
     )
@@ -92,7 +87,7 @@ with tab_qual:
         yLabel="xGA / 90",
         highlight_team=team_to_highlight,
         figsize=(7, 5),
-        interactive=True,
+        interactive_default=True,
         key="qual_chart",
         use_container_width=True,
     )
@@ -110,7 +105,7 @@ with tab_conv:
         yLabel="Goals Against / 90",
         highlight_team=team_to_highlight,
         figsize=(7, 5),
-        interactive=True,
+        interactive_default=True,
         key="conv_chart",
         use_container_width=True,
     )
