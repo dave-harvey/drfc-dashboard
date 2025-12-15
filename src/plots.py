@@ -192,7 +192,7 @@ def scatter_plot(
             highlight_team=highlight_team,
             height=int(figsize[1] * 100),  # simple conversion: inches → px
         )
-        st.plotly_chart(fig, use_container_width=use_container_width)
+        st.plotly_chart(fig, use_container_width=True)
     else:
         fig = _scatter_matplotlib(
             df=df,
