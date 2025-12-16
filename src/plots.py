@@ -153,10 +153,10 @@ def _scatter_matplotlib(
     ax.axvline(df[x].mean(), linestyle="--", linewidth=0.7, color="grey")
     ax.axhline(df[y].mean(), linestyle="--", linewidth=0.7, color="grey")
 
-    ax.set_title(title, fontsize=12)
-    ax.set_xlabel(xLabel or x, fontsize=10)
-    ax.set_ylabel(yLabel or y, fontsize=10)
-    ax.tick_params(axis="both", labelsize=8)
+    ax.set_title(title, fontsize=10)
+    ax.set_xlabel(xLabel or x, fontsize=8)
+    ax.set_ylabel(yLabel or y, fontsize=8)
+    ax.tick_params(axis="both", labelsize=6)
 
     ax.grid(False)
     ax.spines["top"].set_visible(False)
