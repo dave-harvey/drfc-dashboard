@@ -32,7 +32,7 @@ def _scatter_plotly(
             {True: "Highlight", False: "Other"}
         )
         df_plot["_size"] = df_plot["_highlight"].map(
-            {True: 12, False: 6}   # tweak sizes here
+            {True: 12, False: 6}
         )
         color_col = "_group"
         color_map = {"Other": "#4169E1", "Highlight": "#DC143C"}
@@ -42,9 +42,21 @@ def _scatter_plotly(
         color_col = None
         color_map = None
 
-    # Hover: show all useful columns except internals
-    hover_exclude = {"_highlight", "_group", "_size"}
-    hover_cols: List[str] = [c for c in df_plot.columns if c not in hover_exclude]
+    # Add customdata → pass team name into hovertemplate
+    df_plot["custom_team"] = df_plot["Team"]
+
+    # Build hovertemplate carefully so %{x} / %{y} survive
+    x_label_text = xLabel or x
+    y_label_text = yLabel or y
+
+    hovertemplate = (
+        "<b>%{customdata[0]}</b><br>"
+        + x_label_text
+        + ": %{x}<br>"
+        + y_label_text
+        + ": %{y}<br>"
+        "<extra></extra>"
+    )
 
     fig = px.scatter(
         df_plot,
@@ -54,26 +66,22 @@ def _scatter_plotly(
         color_discrete_map=color_map,
         size="_size",
         size_max=12,
-        hover_name="Team",
-        hover_data=hover_cols,
-        text="Team",        # labels on points
+        hover_name=None,          # we control hover ourselves
+        hover_data=None,          # disable automatic extra fields
+        custom_data=["custom_team"],
     )
+
+    # Apply custom hover
+    fig.update_traces(hovertemplate=hovertemplate)
 
     # Layout
     fig.update_layout(
         title=title,
-        xaxis_title=xLabel if xLabel else x,
-        yaxis_title=yLabel if yLabel else y,
+        xaxis_title=x_label_text,
+        yaxis_title=y_label_text,
         showlegend=False,
         height=height,
         margin=dict(l=40, r=20, t=60, b=40),
-    )
-
-    # Label styling & marker outline
-    fig.update_traces(
-        textposition="top center",
-        textfont=dict(size=9),
-        marker=dict(line=dict(width=0.5, color="black")),
     )
 
     # Quadrant lines
@@ -114,12 +122,12 @@ def _scatter_matplotlib(
     fig, ax = plt.subplots(figsize=figsize)
 
     # Base points
-    ax.scatter(df[x], df[y], color="royalblue", s=30, alpha=0.8, zorder=2)
+    ax.scatter(df[x], df[y], color="royalblue", s=20, alpha=0.8, zorder=2)
 
     # Highlighted team
     if highlight_team:
         h = df[df["Team"] == highlight_team]
-        ax.scatter(h[x], h[y], color="crimson", s=80, zorder=3)
+        ax.scatter(h[x], h[y], color="crimson", s=60, zorder=3)
 
     # Labels with adjustText
     texts = []
@@ -130,7 +138,7 @@ def _scatter_matplotlib(
                 row[x],
                 row[y],
                 row["Team"],
-                fontsize=7,
+                fontsize=6,
                 color=colour,
             )
         )
@@ -145,10 +153,10 @@ def _scatter_matplotlib(
     ax.axvline(df[x].mean(), linestyle="--", linewidth=0.7, color="grey")
     ax.axhline(df[y].mean(), linestyle="--", linewidth=0.7, color="grey")
 
-    ax.set_title(title, fontsize=12)
-    ax.set_xlabel(xLabel or x, fontsize=10)
-    ax.set_ylabel(yLabel or y, fontsize=10)
-    ax.tick_params(axis="both", labelsize=8)
+    ax.set_title(title, fontsize=10)
+    ax.set_xlabel(xLabel or x, fontsize=8)
+    ax.set_ylabel(yLabel or y, fontsize=8)
+    ax.tick_params(axis="both", labelsize=6)
 
     ax.grid(False)
     ax.spines["top"].set_visible(False)
@@ -168,10 +176,8 @@ def scatter_plot(
     xLabel: Optional[str] = None,
     yLabel: Optional[str] = None,
     highlight_team: Optional[str] = None,
-    figsize: Tuple[int, int] = (6, 6),
-    interactive_default: bool = True,
-    key: Optional[str] = None,
-    use_container_width: bool = True,
+    figsize: Tuple[int, int] = (7, 5),
+    interactive: bool = True,
 ):
     """
     Renders a scatter plot in Streamlit using either Plotly (interactive)
@@ -182,18 +188,8 @@ def scatter_plot(
     - generating the appropriate figure
     - rendering it in the app
     """
-    options = ["Interactive", "Static"]
-    default_index = 0 if interactive_default else 1
 
-    chart_type = st.radio(
-        "Chart type:",
-        options,
-        index=default_index,
-        horizontal=True,
-        key=key,
-    )
-
-    if chart_type == "Interactive":
+    if interactive:
         fig = _scatter_plotly(
             df=df,
             x=x,
@@ -204,7 +200,7 @@ def scatter_plot(
             highlight_team=highlight_team,
             height=int(figsize[1] * 100),  # simple conversion: inches → px
         )
-        st.plotly_chart(fig, use_container_width=use_container_width)
+        st.plotly_chart(fig, use_container_width=True)
     else:
         fig = _scatter_matplotlib(
             df=df,
@@ -214,6 +210,6 @@ def scatter_plot(
             xLabel=xLabel,
             yLabel=yLabel,
             highlight_team=highlight_team,
-            figsize=figsize,
+            figsize=(7, 5),
         )
-        st.pyplot(fig)
+        st.pyplot(fig, use_container_width=False)
