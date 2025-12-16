@@ -50,6 +50,11 @@ df = load_data()
 #team_to_highlight = st.sidebar.selectbox("Highlight a team", df["Team"].unique())
 team_to_highlight = "Doncaster Rovers"
 
+interactive = st.toggle(
+    "Interactive chart",
+    value=0
+)
+
 # --------------------------
 # Tabs for the three views
 # --------------------------
@@ -64,13 +69,10 @@ with tab_freq:
         x="Shots",
         y="Shots_Against",
         title="Shots vs Shots Against",
-        xLabel="Shots / 90",
-        yLabel="Shots Against / 90",
+        xLabel="Average Shots",
+        yLabel="Average Shots Against",
         highlight_team=team_to_highlight,
-        figsize=(6, 8),
-        interactive_default=True,
-        key="freq_chart",
-        use_container_width=True,
+        interactive=interactive,
     )
 
 with tab_qual:
@@ -82,13 +84,10 @@ with tab_qual:
         x="xG",
         y="xGA",
         title="xG vs xGA",
-        xLabel="xG / 90",
-        yLabel="xGA / 90",
+        xLabel="Average xG",
+        yLabel="Average xGA",
         highlight_team=team_to_highlight,
-        figsize=(7, 5),
-        interactive_default=True,
-        key="qual_chart",
-        use_container_width=True,
+        interactive=interactive,
     )
 
 with tab_conv:
@@ -100,12 +99,9 @@ with tab_conv:
         x="Goals",
         y="Goals_Against",
         title="Goals vs Goals Against",
-        xLabel="Goals / 90",
-        yLabel="Goals Against / 90",
+        xLabel="Average Goals",
+        yLabel="Average Goals Against",
         highlight_team=team_to_highlight,
-        figsize=(7, 5),
-        interactive_default=True,
-        key="conv_chart",
-        use_container_width=True,
+        interactive=interactive,
     )
 
