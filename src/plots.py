@@ -122,12 +122,12 @@ def _scatter_matplotlib(
     fig, ax = plt.subplots(figsize=figsize)
 
     # Base points
-    ax.scatter(df[x], df[y], color="royalblue", s=30, alpha=0.8, zorder=2)
+    ax.scatter(df[x], df[y], color="royalblue", s=20, alpha=0.8, zorder=2)
 
     # Highlighted team
     if highlight_team:
         h = df[df["Team"] == highlight_team]
-        ax.scatter(h[x], h[y], color="crimson", s=80, zorder=3)
+        ax.scatter(h[x], h[y], color="crimson", s=60, zorder=3)
 
     # Labels with adjustText
     texts = []
@@ -138,7 +138,7 @@ def _scatter_matplotlib(
                 row[x],
                 row[y],
                 row["Team"],
-                fontsize=7,
+                fontsize=6,
                 color=colour,
             )
         )
