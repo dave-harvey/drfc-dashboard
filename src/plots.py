@@ -210,6 +210,6 @@ def scatter_plot(
             xLabel=xLabel,
             yLabel=yLabel,
             highlight_team=highlight_team,
-            figsize=(8, 6),
+            figsize=(7, 5),
         )
         st.pyplot(fig, use_container_width=False)
