@@ -37,3 +37,14 @@
     border-color: #FF0000 !important;
     color: white !important;
 }
+
+
+/* panels */
+div[data-testid="stVerticalBlock"] {
+    border-radius: 1px;
+    border-color: #444444;
+}
+
+div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > div[data-testid="stLayoutWrapper"] {
+    background-color: #333333;
+}
