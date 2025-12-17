@@ -27,35 +27,79 @@ df = load_data()
 def render():
     team_to_highlight = "Doncaster Rovers"
 
+    firstCols = st.columns(1)
 
-    tab_freq, tab_qual = st.tabs(["Frequency", "Quality"])
+    with firstCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Performance</h3>",
+                unsafe_allow_html=True
+            )
 
-    with tab_freq:
-        st.subheader("Frequency — Shot Volume")
-        st.write("This chart shows how often Doncaster Rovers create shots and how many they allow the opposition to take. It reflects the team’s overall attacking and defensive activity.")
+            st.markdown(
+                """
+                We assess Doncaster Rovers’ performance from two complementary perspectives:
 
-        scatter_plot(
-            df=df,
-            x="Shots",
-            y="Shots_Against",
-            title="Shots vs Shots Against",
-            xLabel="Average Shots",
-            yLabel="Average Shots Against",
-            highlight_team=team_to_highlight,
-            interactive=False,
-        )
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Frequency:</span>
+                Reflects how often chances are created and how many shots are conceded, capturing the team’s
+                overall attacking and defensive activity.
 
-    with tab_qual:
-        st.subheader("Quality — Expected Goals")
-        st.write("This chart shows the quality of chances created and conceded, using expected goals (xG) for and expected goals against (xGA). It indicates how dangerous Doncaster Rovers are in attack and how well they limit opposition chances.")
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Quality:</span>
+                Measures the standard of those chances using expected goals (xG) for and expected goals against (xGA),
+                indicating how dangerous Doncaster Rovers are in attack and how effectively they limit opposition opportunities.
+                """,
+                unsafe_allow_html=True
+            )
+            # Add a bit of vertical space
+            st.write("")
 
-        scatter_plot(
-            df=df,
-            x="xG",
-            y="xGA",
-            title="xG vs xGA",
-            xLabel="Average xG",
-            yLabel="Average xGA",
-            highlight_team=team_to_highlight,
-            interactive=False,
-        )
+            st.caption("Data reflects matches played up to and including 9 December 2025.")
+
+            # Add a bit of vertical space
+            st.write("")
+
+
+    secondCols = st.columns(1)
+
+    with secondCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Frequency - Shot Volume</h3>",
+                unsafe_allow_html=True
+            )
+
+            # Add a bit of vertical space
+            st.write("")
+
+            scatter_plot(
+                df=df,
+                x="Shots",
+                y="Shots_Against",
+                title="Shots vs Shots Against",
+                xLabel="Average Shots",
+                yLabel="Average Shots Against",
+                highlight_team=team_to_highlight,
+                interactive=False,
+            )
+
+    thirdCols = st.columns(1)
+    with thirdCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Quality - Expected Goals</h3>",
+                unsafe_allow_html=True
+            )
+
+            # Add a bit of vertical space
+            st.write("")
+
+            scatter_plot(
+                df=df,
+                x="xG",
+                y="xGA",
+                title="xG vs xGA",
+                xLabel="Average xG",
+                yLabel="Average xGA",
+                highlight_team=team_to_highlight,
+                interactive=False,
+            )

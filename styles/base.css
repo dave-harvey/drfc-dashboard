@@ -48,3 +48,4 @@ div[data-testid="stVerticalBlock"] {
 div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > div[data-testid="stLayoutWrapper"] {
     background-color: #333333;
 }
+

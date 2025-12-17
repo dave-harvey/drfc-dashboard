@@ -25,7 +25,7 @@ def render():
     with middleCols[0]:
         with st.container(border=True):
             st.markdown(
-               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>About</h1>",
+               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>About</h3>",
                 unsafe_allow_html=True
             )
 
@@ -35,18 +35,20 @@ def render():
                 <span style="color:#00cc44; font-weight:600;">underlying performance</span>
                 and compares it with the
                 <span style="color:#00cc44; font-weight:600;">results</span> achieved on the pitch. By examining the
-                frequency and quality< of chances created and conceded, and comparing these measures with goals
+                frequency and quality of chances created and conceded, and comparing these measures with goals
                 scored and conceded, the dashboard shows whether outcomes reflect underlying performance or diverge
                 from it.
                 </p>
                 """,
                 unsafe_allow_html=True
             )
+            # Add a bit of vertical space
+            st.write("")
 
     with middleCols[1]:
         with st.container(border=True):
             st.markdown(
-               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Plot Chart Information</h1>",
+               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Plot Chart Information</h3>",
                 unsafe_allow_html=True
             )
 
@@ -63,15 +65,18 @@ def render():
                 """,
                 unsafe_allow_html=True
             )
+            # Add a bit of vertical space
+            st.write("")
 
-            #st.caption("Data reflects matches played up to and including 9 December 2025.")
+    # Add a bit of vertical space
+    st.write("")
 
-
+    # Bottom card
     bottomCols = st.columns(1)
     with bottomCols[0]:
         with st.container(border=True):
             st.markdown(
-               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Tab Contents:</h1>",
+               "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Tab Contents:</h3>",
                 unsafe_allow_html=True
             )
 
@@ -87,3 +92,6 @@ def render():
                 """,
                 unsafe_allow_html=True
             )
+
+            # Add a bit of vertical space
+            st.write("")
