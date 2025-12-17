@@ -1,8 +1,22 @@
 import streamlit as st
 import pandas as pd
 from src.plots import scatter_plot
-#
+from src.styles import load_css
+
+# Load your base styling
+load_css("styles/base.css")
+
+
+# Set the page configuration
 st.set_page_config(page_title="Donny Dashboard", layout="wide")
+
+
+# ---------------------------
+# MENU USING TABS
+# ---------------------------
+tab_overview, tab_perf, tab_outcomes = st.tabs(["Overview", "Performance", "Outcomes"])
+
+
 
 st.title("Doncaster Rovers Dashboard")
 

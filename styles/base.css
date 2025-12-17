@@ -1,0 +1,39 @@
+/* -------------------------------------------
+   TAB BAR CUSTOM STYLING
+   ------------------------------------------- */
+
+/* Remove the full-width grey underline under tabs */
+.stTabs [data-baseweb="tab-border"] {
+    background-color: #000000 !important;
+}
+
+/* Remove default Streamlit tab underline + spacing adjustments */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+    border-bottom: none !important;
+}
+
+/* Tab appearance */
+.stTabs [data-baseweb="tab"] {
+    background-color: #202020;
+    padding: 8px 18px;
+    border-radius: 3px;
+    border: 1px solid #444;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hover effect */
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #333333;
+    color: white;
+}
+
+/* Selected tab (active) */
+.stTabs [aria-selected="true"] {
+    border-color: #FF0000 !important;
+    color: white !important;
+}
