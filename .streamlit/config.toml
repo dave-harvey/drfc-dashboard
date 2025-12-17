@@ -1,0 +1,30 @@
+[theme]
+base = "dark"
+
+# -----------------------------
+# COLORS
+# -----------------------------
+textColor = "#e2e8f0"
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#0f172b"
+
+# Widget border styling
+showWidgetBorder = true
+borderColor = "#314158"
+
+# Dataframes
+dataframeHeaderBackgroundColor = "#1d293d"
+
+# -----------------------------
+# FONTS
+# -----------------------------
+
+# Body text → URBAN
+font = "Urban:https://fonts.googleapis.com/css2?family=Urban:wght@300..700&display=swap"
+
+# Headings → URBAN (matching your preference)
+headingFont = "Urban"
+
+# Data-heavy UI → INTER
+# Streamlit allows a separate font for plots/tables via CSS injection,
+# so we will override Inter in CSS (see below).
