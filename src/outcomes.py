@@ -27,17 +27,51 @@ df = load_data()
 def render():
     team_to_highlight = "Doncaster Rovers"
 
-    st.subheader("Conversion — Goals vs Goals Against")
-    st.write("This chart shows goals scored and conceded, illustrating how effectively Doncaster Rovers convert their chances and prevent the opposition from scoring.")
+    firstCols = st.columns(1)
 
-    scatter_plot(
-        df=df,
-        x="Goals",
-        y="Goals_Against",
-        title="Goals vs Goals Against",
-        xLabel="Average Goals",
-        yLabel="Average Goals Against",
-        highlight_team=team_to_highlight,
-        interactive=False,
-    )
+    with firstCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Outcomes</h3>",
+                unsafe_allow_html=True
+            )
 
+            st.markdown(
+                """
+                Outcomes focus on what happens on the scoreboard. This view shows how often Doncaster Rovers
+                score and concede goals, and allows those results to be compared with underlying performance
+                to highlight where outcomes reflect, or diverge from, the process.
+                """,
+                unsafe_allow_html=True
+            )
+            # Add a bit of vertical space
+            st.write("")
+
+            st.caption("Data reflects matches played up to and including 9 December 2025.")
+
+            # Add a bit of vertical space
+            st.write("")
+
+
+    secondCols = st.columns(1)
+
+    with secondCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Conversion - Goals Scored & Conceded</h3>",
+                unsafe_allow_html=True
+            )
+
+            # Add a bit of vertical space
+            st.write("")
+
+            scatter_plot(
+                df=df,
+                x="Goals",
+                y="Goals_Against",
+                title="Goals vs Goals Against",
+                xLabel="Average Goals",
+                yLabel="Average Goals Against",
+                highlight_team=team_to_highlight,
+                interactive=False,
+            )
