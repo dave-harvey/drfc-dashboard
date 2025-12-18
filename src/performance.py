@@ -1,3 +1,4 @@
+from src.helpers import data_source_caption
 import streamlit as st
 import pandas as pd
 from src.plots import scatter_plot
@@ -53,7 +54,7 @@ def render():
             # Add a bit of vertical space
             st.write("")
 
-            st.caption("Data reflects matches played up to and including 9 December 2025.")
+            data_source_caption()
 
             # Add a bit of vertical space
             st.write("")

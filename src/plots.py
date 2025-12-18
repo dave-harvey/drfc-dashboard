@@ -146,7 +146,7 @@ def _scatter_matplotlib(
     adjust_text(
         texts,
         ax=ax,
-        lim=200,
+        lim=300,
         arrowprops=dict(arrowstyle="-", color="grey", lw=0.5),
     )
 
