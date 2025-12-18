@@ -7,7 +7,7 @@ from src.plots import scatter_plot
 # --------------------------
 @st.cache_data
 def load_data():
-    df_raw = pd.read_json("data/efl_1_20251209.json")
+    df_raw = pd.read_json("data/efl_1_20251218.json")
     df = df_raw.rename(
         columns={
             "name": "Team",
