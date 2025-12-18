@@ -1,3 +1,4 @@
+from src.helpers import data_source_caption
 import streamlit as st
 import pandas as pd
 from src.plots import scatter_plot
@@ -7,7 +8,7 @@ from src.plots import scatter_plot
 # --------------------------
 @st.cache_data
 def load_data():
-    df_raw = pd.read_json("data/efl_1_20251209.json")
+    df_raw = pd.read_json("data/efl_1_20251218.json")
     df = df_raw.rename(
         columns={
             "name": "Team",
@@ -47,7 +48,7 @@ def render():
             # Add a bit of vertical space
             st.write("")
 
-            st.caption("Data reflects matches played up to and including 9 December 2025.")
+            data_source_caption()
 
             # Add a bit of vertical space
             st.write("")
