@@ -63,7 +63,7 @@ def render():
     with secondCols[0]:
         with st.container(border=True):
             st.markdown(
-                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Excpeted Goals</h3>",
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Expected Goals</h3>",
                 unsafe_allow_html=True
             )
 
