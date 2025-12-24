@@ -36,15 +36,16 @@ def render():
 
             st.markdown(
                 """
-                We assess Doncaster Rovers’ performance from two complementary perspectives:
+                This view tracks Doncaster Rovers’ underlying performance across the season using rolling
+                six-match averages.
 
-                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Frequency:</span>
-                Reflects how often chances are created and how many shots are conceded, capturing the team’s
-                overall attacking and defensive activity.
+                - <span style="color:#00cc44; font-weight:800;">xG vs xGA:</span>
+                Compares expected goals for and against over time, showing how attacking output and defensive
+                performance have evolved across the season.
 
-                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Quality:</span>
-                Measures the standard of those chances using expected goals (xG) for and expected goals against (xGA),
-                indicating how dangerous Doncaster Rovers are in attack and how effectively they limit opposition opportunities.
+                - <span style="color:#00cc44; font-weight:800;">xGD:</span>
+                Displays the rolling expected goal difference, summarising the balance between chance creation
+                and prevention and highlighting periods of stronger or weaker underlying performance.
                 """,
                 unsafe_allow_html=True
             )
@@ -95,4 +96,5 @@ def render():
                 x="Match",
                 series1="xGD",
                 title="Rolling 6-game average xGD",
+                show_zero_line=True,
             )
