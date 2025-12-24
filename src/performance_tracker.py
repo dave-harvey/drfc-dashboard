@@ -8,16 +8,13 @@ from src.plots import scatter_plot
 # --------------------------
 @st.cache_data
 def load_data():
-    df_raw = pd.read_json("data/efl_1.json")
+    df_raw = pd.read_json("data/matches.json")
     df = df_raw.rename(
         columns={
-            "name": "Team",
-            "shots": "Shots",
-            "shotsAgainst": "Shots_Against",
+            "match": "Match",
             "xG": "xG",
             "xGA": "xGA",
-            "goals": "Goals",
-            "goalsAgainst": "Goals_Against",
+            "xGD": "xGD"
         }
     )
     return df
