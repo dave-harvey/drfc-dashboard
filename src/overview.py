@@ -82,16 +82,21 @@ def render():
 
             st.markdown(
                 """
-                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Performance: </span>
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Performance:</span>
                 Explore Doncaster Rovers’ underlying performance through the frequency and quality of
-                chances created and conceded, revealing attacking and defensive strengths & weaknesses.
+                chances created and conceded, revealing attacking and defensive strengths and weaknesses.
 
-                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Outcomes: </span>
-                See how goals scored and goals conceded compare with expected
-                performance to show where results align with, or diverge from, underlying play.
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Performance Tracker:</span>
+                Track how underlying performance evolves across the season using rolling six-match averages
+                of expected goals for and against (xG and xGA), alongside expected goal difference (xGD).
+
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Outcomes:</span>
+                See how goals scored and goals conceded compare with expected performance to highlight
+                where results align with, or diverge from, underlying play.
                 """,
                 unsafe_allow_html=True
             )
+
 
             # Add a bit of vertical space
             st.write("")
