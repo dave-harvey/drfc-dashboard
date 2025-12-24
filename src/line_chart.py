@@ -2,6 +2,7 @@ from typing import Optional
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 
 
 def line_chart(
@@ -10,15 +11,10 @@ def line_chart(
     series1: str,
     series2: Optional[str] = None,
     title: str = "",
-    series1Label: str = "",
+    series1Label: Optional[str] = None,
     series2Label: Optional[str] = None,
     show_zero_line: bool = False,
 ):
-    """
-    Create a Matplotlib line chart from one or two dataframe series.
-
-    Assumes all metrics (e.g. rolling averages) are already present in df.
-    """
     required = [x, series1]
     if series2:
         required.append(series2)
@@ -58,8 +54,12 @@ def line_chart(
     for spine in ["top", "right"]:
         ax.spines[spine].set_visible(False)
 
-    ax.legend(frameon=False, loc="best")
+    if series1Label:
+        ax.legend(frameon=False, loc="best")
     ax.set_xlabel("")
 
+    # ✅ Force integer ticks on x-axis (e.g. match numbers)
+    ax.xaxis.set_major_locator(MultipleLocator(1))
+
     fig.tight_layout()
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="content")

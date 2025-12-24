@@ -1,7 +1,7 @@
 from src.helpers import data_source_caption
 import streamlit as st
 import pandas as pd
-from src.plots import scatter_plot
+from src.line_chart import line_chart
 
 # --------------------------
 # Load data from JSON file
@@ -62,42 +62,37 @@ def render():
     with secondCols[0]:
         with st.container(border=True):
             st.markdown(
-                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Frequency - Shot Volume</h3>",
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Excpeted Goals</h3>",
                 unsafe_allow_html=True
             )
 
             # Add a bit of vertical space
             st.write("")
 
-            scatter_plot(
+            line_chart(
                 df=df,
-                x="Shots",
-                y="Shots_Against",
-                title="Shots vs Shots Against",
-                xLabel="Average Shots",
-                yLabel="Average Shots Against",
-                highlight_team=team_to_highlight,
-                interactive=False,
+                x="Match",
+                series1="xG",
+                series2="xGA",
+                title="Rolling 6-game average xG and xGA",
+                series1Label="xG",
+                series2Label="xGA",
             )
 
     thirdCols = st.columns(1)
     with thirdCols[0]:
         with st.container(border=True):
             st.markdown(
-                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Quality - Expected Goals</h3>",
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Expected Goal Difference</h3>",
                 unsafe_allow_html=True
             )
 
             # Add a bit of vertical space
             st.write("")
 
-            scatter_plot(
+            line_chart(
                 df=df,
-                x="xG",
-                y="xGA",
-                title="xG vs xGA",
-                xLabel="Average xG",
-                yLabel="Average xGA",
-                highlight_team=team_to_highlight,
-                interactive=False,
+                x="Match",
+                series1="xGD",
+                title="Rolling 6-game average xGD",
             )
