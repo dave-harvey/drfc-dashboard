@@ -13,5 +13,5 @@ def data_source_caption(
         source: Data source name (default: FotMob)
     """
     st.caption(
-        f"Data reflects matches played up to and including 29 Dec 2025 (source: {source})."
+        f"Data reflects matches played up to and including 1 Jan 2026 (source: {source})."
     )
