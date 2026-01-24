@@ -90,6 +90,10 @@ def render():
                 Track how underlying performance evolves across the season using rolling six-match averages
                 of expected goals for and against (xG and xGA), alongside expected goal difference (xGD).
 
+                - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Justice League:</span>
+                View the league table through a performance-based lens by ranking teams using
+                expected points per game (xPts/Game), highlighting where results may differ from underlying levels.
+
                 - <span style="color:#00cc44; font-weight:800; text-transform: uppercase;">Outcomes:</span>
                 See how goals scored and goals conceded compare with expected performance to highlight
                 where results align with, or diverge from, underlying play.
