@@ -1,47 +1,47 @@
 [
     {
         "name": "AFC Wimbledon",
-        "shots": 9.8,
-        "shotsAgainst": 11.4,
+        "shots": 9.69,
+        "shotsAgainst": 11.58,
         "xG": 1.01,
-        "xGA": 1.27,
+        "xGA": 1.34,
         "goals": 1.08,
-        "goalsAgainst": 1.36
+        "goalsAgainst": 1.35
     },
     {
         "name": "Barnsley",
-        "shots": 12.05,
-        "shotsAgainst": 12.32,
-        "xG": 1.28,
+        "shots": 11.65,
+        "shotsAgainst": 12.22,
+        "xG": 1.27,
         "xGA": 1.45,
-        "goals": 1.59,
-        "goalsAgainst": 1.55
+        "goals": 1.61,
+        "goalsAgainst": 1.57
     },
     {
         "name": "Blackpool",
-        "shots": 9.96,
-        "shotsAgainst": 14.42,
-        "xG": 0.95,
-        "xGA": 1.53,
-        "goals": 1.23,
-        "goalsAgainst": 1.5
+        "shots": 10.37,
+        "shotsAgainst": 14.26,
+        "xG": 1.01,
+        "xGA": 1.49,
+        "goals": 1.26,
+        "goalsAgainst": 1.44
     },
     {
         "name": "Bolton Wanderers",
-        "shots": 16.78,
-        "shotsAgainst": 8.26,
-        "xG": 1.49,
-        "xGA": 0.86,
-        "goals": 1.22,
+        "shots": 16.64,
+        "shotsAgainst": 8.32,
+        "xG": 1.51,
+        "xGA": 0.84,
+        "goals": 1.25,
         "goalsAgainst": 0.93
     },
     {
         "name": "Bradford City",
-        "shots": 13.04,
-        "shotsAgainst": 11.88,
-        "xG": 1.44,
-        "xGA": 1.09,
-        "goals": 1.4,
+        "shots": 12.73,
+        "shotsAgainst": 11.96,
+        "xG": 1.39,
+        "xGA": 1.11,
+        "goals": 1.35,
         "goalsAgainst": 1.08
     },
     {
@@ -55,48 +55,48 @@
     },
     {
         "name": "Cardiff City",
-        "shots": 14.5,
-        "shotsAgainst": 12.62,
-        "xG": 1.57,
-        "xGA": 1.18,
-        "goals": 1.73,
+        "shots": 14.48,
+        "shotsAgainst": 12.56,
+        "xG": 1.55,
+        "xGA": 1.19,
+        "goals": 1.7,
         "goalsAgainst": 1.0
     },
     {
         "name": "Doncaster Rovers",
-        "shots": 12.0,
-        "shotsAgainst": 11.04,
-        "xG": 1.29,
+        "shots": 12.62,
+        "shotsAgainst": 10.92,
+        "xG": 1.34,
         "xGA": 1.18,
-        "goals": 1.0,
-        "goalsAgainst": 1.64
+        "goals": 1.08,
+        "goalsAgainst": 1.69
     },
     {
         "name": "Exeter City",
-        "shots": 10.0,
-        "shotsAgainst": 12.04,
-        "xG": 1.08,
-        "xGA": 1.18,
-        "goals": 1.12,
+        "shots": 10.04,
+        "shotsAgainst": 12.08,
+        "xG": 1.13,
+        "xGA": 1.19,
+        "goals": 1.19,
         "goalsAgainst": 0.92
     },
     {
         "name": "Huddersfield Town",
-        "shots": 12.89,
-        "shotsAgainst": 10.78,
-        "xG": 1.5,
-        "xGA": 1.07,
-        "goals": 1.7,
-        "goalsAgainst": 1.41
+        "shots": 12.93,
+        "shotsAgainst": 10.57,
+        "xG": 1.51,
+        "xGA": 1.04,
+        "goals": 1.68,
+        "goalsAgainst": 1.36
     },
     {
         "name": "Leyton Orient",
-        "shots": 11.85,
-        "shotsAgainst": 11.04,
-        "xG": 1.38,
-        "xGA": 1.44,
-        "goals": 1.5,
-        "goalsAgainst": 1.65
+        "shots": 11.78,
+        "shotsAgainst": 11.11,
+        "xG": 1.35,
+        "xGA": 1.47,
+        "goals": 1.48,
+        "goalsAgainst": 1.67
     },
     {
         "name": "Lincoln City",
@@ -109,110 +109,110 @@
     },
     {
         "name": "Luton Town",
-        "shots": 12.46,
-        "shotsAgainst": 9.31,
+        "shots": 12.48,
+        "shotsAgainst": 9.56,
         "xG": 1.47,
-        "xGA": 1.14,
-        "goals": 1.42,
-        "goalsAgainst": 1.23
+        "xGA": 1.17,
+        "goals": 1.37,
+        "goalsAgainst": 1.22
     },
     {
         "name": "Mansfield Town",
-        "shots": 10.75,
-        "shotsAgainst": 11.96,
-        "xG": 1.23,
-        "xGA": 1.37,
-        "goals": 1.42,
-        "goalsAgainst": 1.17
+        "shots": 10.52,
+        "shotsAgainst": 12.08,
+        "xG": 1.22,
+        "xGA": 1.34,
+        "goals": 1.4,
+        "goalsAgainst": 1.16
     },
     {
         "name": "Northampton Town",
-        "shots": 8.88,
-        "shotsAgainst": 13.0,
-        "xG": 0.94,
-        "xGA": 1.35,
-        "goals": 0.92,
-        "goalsAgainst": 1.2
+        "shots": 8.92,
+        "shotsAgainst": 13.31,
+        "xG": 0.92,
+        "xGA": 1.4,
+        "goals": 0.88,
+        "goalsAgainst": 1.23
     },
     {
         "name": "Peterborough United",
-        "shots": 12.73,
-        "shotsAgainst": 12.38,
-        "xG": 1.31,
-        "xGA": 1.43,
-        "goals": 1.27,
-        "goalsAgainst": 1.35
+        "shots": 12.52,
+        "shotsAgainst": 12.44,
+        "xG": 1.33,
+        "xGA": 1.44,
+        "goals": 1.3,
+        "goalsAgainst": 1.3
     },
     {
         "name": "Plymouth Argyle",
-        "shots": 11.77,
-        "shotsAgainst": 12.69,
-        "xG": 1.25,
-        "xGA": 1.48,
-        "goals": 1.27,
-        "goalsAgainst": 1.5
+        "shots": 11.93,
+        "shotsAgainst": 12.7,
+        "xG": 1.28,
+        "xGA": 1.47,
+        "goals": 1.26,
+        "goalsAgainst": 1.44
     },
     {
         "name": "Port Vale",
-        "shots": 12.04,
-        "shotsAgainst": 10.54,
-        "xG": 1.25,
-        "xGA": 1.04,
-        "goals": 0.75,
-        "goalsAgainst": 1.42
+        "shots": 12.08,
+        "shotsAgainst": 10.56,
+        "xG": 1.26,
+        "xGA": 1.08,
+        "goals": 0.76,
+        "goalsAgainst": 1.48
     },
     {
         "name": "Reading",
-        "shots": 12.12,
-        "shotsAgainst": 11.96,
+        "shots": 12.04,
+        "shotsAgainst": 11.62,
         "xG": 1.2,
-        "xGA": 1.18,
-        "goals": 1.32,
-        "goalsAgainst": 1.24
+        "xGA": 1.17,
+        "goals": 1.35,
+        "goalsAgainst": 1.27
     },
     {
         "name": "Rotherham United",
-        "shots": 9.8,
-        "shotsAgainst": 12.76,
-        "xG": 0.93,
-        "xGA": 1.56,
+        "shots": 10.04,
+        "shotsAgainst": 12.54,
+        "xG": 1.02,
+        "xGA": 1.54,
         "goals": 0.96,
-        "goalsAgainst": 1.52
+        "goalsAgainst": 1.5
     },
     {
         "name": "Stevenage",
-        "shots": 9.08,
-        "shotsAgainst": 10.64,
-        "xG": 0.83,
-        "xGA": 1.14,
+        "shots": 9.31,
+        "shotsAgainst": 10.42,
+        "xG": 0.82,
+        "xGA": 1.13,
         "goals": 1.08,
         "goalsAgainst": 0.92
     },
     {
         "name": "Stockport County",
-        "shots": 12.0,
-        "shotsAgainst": 11.35,
+        "shots": 11.96,
+        "shotsAgainst": 11.44,
         "xG": 1.39,
         "xGA": 1.14,
-        "goals": 1.42,
-        "goalsAgainst": 1.23
+        "goals": 1.41,
+        "goalsAgainst": 1.22
     },
     {
         "name": "Wigan Athletic",
-        "shots": 10.72,
-        "shotsAgainst": 11.92,
+        "shots": 10.62,
+        "shotsAgainst": 12.54,
         "xG": 1.34,
-        "xGA": 1.05,
-        "goals": 1.04,
-        "goalsAgainst": 1.12
+        "xGA": 1.11,
+        "goals": 1.12,
+        "goalsAgainst": 1.19
     },
     {
         "name": "Wycombe Wanderers",
-        "shots": 12.31,
-        "shotsAgainst": 11.04,
-        "xG": 1.32,
-        "xGA": 1.17,
-        "goals": 1.31,
-        "goalsAgainst": 1.12
+        "shots": 12.37,
+        "shotsAgainst": 10.89,
+        "xG": 1.34,
+        "xGA": 1.19,
+        "goals": 1.26,
+        "goalsAgainst": 1.15
     }
 ]
