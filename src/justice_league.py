@@ -12,7 +12,8 @@ def load_data():
     df = df_raw.rename(
         columns={
             "team": "Team",
-            "xPts": "xPts"
+            "xPts": "xPts",
+            "predictedPoints": "PredictedPoints"
         }
     )
     return df
@@ -34,13 +35,16 @@ def render():
 
             st.markdown(
                 """
-                The <strong>Justice League</strong> view shows how the table might look if match performances were
-                consistently converted into results. It ranks teams by <span style="color:#00cc44; font-weight:800;">
-                expected points per game (xPts/Game)</span>, providing a performance-based view of the league that
-                can highlight sides who may be over- or under-performing their underlying levels.
+                The <strong>Justice League</strong> view shows how the league table might look if match performances were
+                consistently converted into results. Teams are ranked by
+                <span style="color:#00cc44; font-weight:800;">expected points per game (xPts/Game)</span>, providing a
+                performance-based view of the league that can highlight sides who may be over- or under-performing their
+                underlying levels. This page also compares each team’s <strong>actual points</strong> with a simple
+                <strong>projection</strong> based on maintaining current performance levels across the remaining fixtures.
                 """,
                 unsafe_allow_html=True
             )
+
 
             # Add a bit of vertical space
             st.write("")
@@ -72,3 +76,25 @@ def render():
                 highlight_label=team_to_highlight
             )
 
+
+    thirdCols = st.columns(1)
+
+    with thirdCols[0]:
+        with st.container(border=True):
+            st.markdown(
+                "<h3 style='margin-bottom: 0; text-transform: uppercase;'>Projected Points League</h3>",
+                unsafe_allow_html=True
+            )
+
+            # Add a bit of vertical space
+            st.write("")
+
+            #
+            bar_chart(
+                df=df,
+                y="Team",
+                x="PredictedPoints",
+                title="League 1 2025/26 - Predicted Points",
+                value_format="{:.2f}",
+                highlight_label=team_to_highlight
+            )
