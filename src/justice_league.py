@@ -94,7 +94,7 @@ def render():
                 df=df,
                 y="Team",
                 x="PredictedPoints",
-                title="League 1 2025/26 - Predicted Points",
+                title="League 1 2025/26 - Projected Points",
                 value_format="{:.2f}",
                 highlight_label=team_to_highlight
             )
