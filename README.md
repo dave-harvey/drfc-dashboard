@@ -18,6 +18,10 @@ Assesses the *process* behind performances using:
 - **Frequency** — how often shots are created and conceded.
 - **Quality** — the standard of chances, using expected goals (**xG**) and expected goals against (**xGA**).
 
+The dashboard also includes a **Performance Tracker**, showing rolling six-match averages of **xG**, **xGA**, and **xGD** across the season to highlight trends over time.
+A **Justice League** view ranks teams by **expected points per game (xPts/Game)** to show how the table might look if underlying performances were consistently converted into results.
+
+
 ### Outcomes
 Focuses on what happens on the scoreboard:
 - Goals scored per game
