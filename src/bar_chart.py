@@ -17,8 +17,8 @@ def bar_chart(
     value_format: str = "{:.2f}",
     top_n: Optional[int] = None,
     highlight_label: Optional[str] = None,
-    base_color: str = "#4169E1",        # default bar color (close to your example)
-    highlight_color: str = "#DC143C",   # default highlight (Doncaster red)
+    base_color: str = "#4169E1",        # default bar color
+    highlight_color: str = "#DC143C",   # default highlight
 ):
     """
     Generic horizontal bar chart, sorted highest to lowest, rendered in Streamlit.
