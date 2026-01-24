@@ -34,10 +34,14 @@ def render():
 
             st.markdown(
                 """
-                Coming soon
+                The <strong>Justice League</strong> view shows how the table might look if match performances were
+                consistently converted into results. It ranks teams by <span style="color:#00cc44; font-weight:800;">
+                expected points per game (xPts/Game)</span>, providing a performance-based view of the league that
+                can highlight sides who may be over- or under-performing their underlying levels.
                 """,
                 unsafe_allow_html=True
             )
+
             # Add a bit of vertical space
             st.write("")
 
