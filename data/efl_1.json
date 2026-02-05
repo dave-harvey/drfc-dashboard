@@ -2,20 +2,20 @@
     {
         "name": "AFC Wimbledon",
         "shots": 9.89,
-        "shotsAgainst": 11.78,
-        "xG": 1.01,
-        "xGA": 1.35,
+        "shotsAgainst": 11.71,
+        "xG": 1.0,
+        "xGA": 1.32,
         "goals": 1.04,
-        "goalsAgainst": 1.33
+        "goalsAgainst": 1.29
     },
     {
         "name": "Barnsley",
-        "shots": 11.48,
-        "shotsAgainst": 12.28,
-        "xG": 1.24,
-        "xGA": 1.48,
-        "goals": 1.6,
-        "goalsAgainst": 1.64
+        "shots": 11.88,
+        "shotsAgainst": 12.31,
+        "xG": 1.3,
+        "xGA": 1.5,
+        "goals": 1.62,
+        "goalsAgainst": 1.65
     },
     {
         "name": "Blackpool",
@@ -46,12 +46,12 @@
     },
     {
         "name": "Burton Albion",
-        "shots": 11.57,
+        "shots": 11.86,
         "shotsAgainst": 13.14,
-        "xG": 1.16,
-        "xGA": 1.48,
+        "xG": 1.14,
+        "xGA": 1.53,
         "goals": 1.07,
-        "goalsAgainst": 1.46
+        "goalsAgainst": 1.48
     },
     {
         "name": "Cardiff City",
@@ -65,11 +65,11 @@
     {
         "name": "Doncaster Rovers",
         "shots": 12.79,
-        "shotsAgainst": 10.68,
-        "xG": 1.38,
-        "xGA": 1.14,
-        "goals": 1.11,
-        "goalsAgainst": 1.61
+        "shotsAgainst": 11.0,
+        "xG": 1.43,
+        "xGA": 1.13,
+        "goals": 1.14,
+        "goalsAgainst": 1.59
     },
     {
         "name": "Exeter City",
@@ -127,12 +127,12 @@
     },
     {
         "name": "Northampton Town",
-        "shots": 9.14,
-        "shotsAgainst": 13.36,
-        "xG": 0.95,
-        "xGA": 1.41,
-        "goals": 0.86,
-        "goalsAgainst": 1.29
+        "shots": 9.28,
+        "shotsAgainst": 13.66,
+        "xG": 0.99,
+        "xGA": 1.47,
+        "goals": 0.9,
+        "goalsAgainst": 1.31
     },
     {
         "name": "Peterborough United",
@@ -154,12 +154,12 @@
     },
     {
         "name": "Port Vale",
-        "shots": 11.88,
-        "shotsAgainst": 10.58,
-        "xG": 1.23,
+        "shots": 11.81,
+        "shotsAgainst": 10.56,
+        "xG": 1.21,
         "xGA": 1.08,
-        "goals": 0.77,
-        "goalsAgainst": 1.42
+        "goals": 0.74,
+        "goalsAgainst": 1.41
     },
     {
         "name": "Reading",
