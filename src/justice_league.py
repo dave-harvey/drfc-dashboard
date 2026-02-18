@@ -54,8 +54,6 @@ def render():
                 unsafe_allow_html=True
             )
 
-
-
             # Add a bit of vertical space
             st.write("")
 
