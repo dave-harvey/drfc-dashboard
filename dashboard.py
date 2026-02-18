@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from src.plots import scatter_plot
+from src.helpers import data_source_caption
 from src.styles import load_css
 from src import overview, performance, outcomes, performance_tracker, justice_league
 
@@ -33,3 +33,6 @@ with tabs[3]:
 with tabs[4]:
     outcomes.render()
 
+
+st.caption("")
+data_source_caption()
