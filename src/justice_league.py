@@ -1,4 +1,3 @@
-from src.helpers import data_source_caption
 import streamlit as st
 import pandas as pd
 from src.bar_chart import bar_chart
@@ -45,11 +44,17 @@ def render():
                 unsafe_allow_html=True
             )
 
+            st.markdown(
+                """
+                View the actual league table on
+                <a href="https://www.bbc.co.uk/sport/football/tables#LeagueOne" target="_blank"
+                style="color:#00cc44; font-weight:600; text-decoration:none;">
+                the BBC website <span style="font-size:0.9em;">↗</span></a>
+                """,
+                unsafe_allow_html=True
+            )
 
-            # Add a bit of vertical space
-            st.write("")
 
-            data_source_caption()
 
             # Add a bit of vertical space
             st.write("")

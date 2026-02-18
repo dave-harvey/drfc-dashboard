@@ -1,4 +1,3 @@
-from src.helpers import data_source_caption
 import streamlit as st
 import pandas as pd
 from src.plots import scatter_plot
@@ -45,10 +44,6 @@ def render():
                 """,
                 unsafe_allow_html=True
             )
-            # Add a bit of vertical space
-            st.write("")
-
-            data_source_caption()
 
             # Add a bit of vertical space
             st.write("")
