@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 import pandas as pd
 from src.plots import scatter_plot
@@ -7,7 +8,10 @@ from src.plots import scatter_plot
 # --------------------------
 @st.cache_data
 def load_data():
-    df_raw = pd.read_json("data/efl_1.json")
+    json_string = st.secrets["EFL1_JSON"]
+    data = json.loads(json_string)
+
+    df_raw = pd.DataFrame(data)
     df = df_raw.rename(
         columns={
             "name": "Team",

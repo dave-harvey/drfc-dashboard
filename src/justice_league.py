@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 import pandas as pd
 from src.bar_chart import bar_chart
@@ -7,7 +8,9 @@ from src.bar_chart import bar_chart
 # --------------------------
 @st.cache_data
 def load_data():
-    df_raw = pd.read_json("data/efl_1_xpts.json")
+    json_string = st.secrets["XPTS_JSON"]
+    data = json.loads(json_string)
+    df_raw = pd.DataFrame(data)
     df = df_raw.rename(
         columns={
             "team": "Team",

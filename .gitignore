@@ -209,3 +209,7 @@ __marimo__/
 
 # Remove local .json files
 *.json
+
+# Remove streamlit secrets toml files
+.streamlit/secrets.toml
+
