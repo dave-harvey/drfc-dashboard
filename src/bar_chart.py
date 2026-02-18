@@ -82,40 +82,6 @@ def bar_chart(
     for spine in ["top", "right"]:
         ax.spines[spine].set_visible(False)
 
-    # Value labels
-    max_val = plot_df[x].max() if len(plot_df) else 0
-    for i, (team, val) in enumerate(zip(plot_df[y].astype(str).values, plot_df[x].values)):
-        if pd.isna(val):
-            continue
-
-        label = value_format.format(val)
-        inside = max_val > 0 and val > 0.15 * max_val
-        is_highlight = highlight_label is not None and team == str(highlight_label)
-
-        # slightly bolder label for highlighted team
-        label_weight = "bold" if is_highlight else "normal"
-
-        if inside:
-            ax.text(
-                val - (0.03 * max_val),
-                i,
-                label,
-                va="center",
-                ha="right",
-                fontsize=9,
-                fontweight=label_weight,
-                color="white",
-            )
-        else:
-            ax.text(
-                val + (0.01 * max_val),
-                i,
-                label,
-                va="center",
-                ha="left",
-                fontsize=9,
-                fontweight=label_weight,
-            )
 
     fig.tight_layout()
     st.pyplot(fig, width="content")

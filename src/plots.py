@@ -158,6 +158,7 @@ def _scatter_matplotlib(
     ax.set_xlabel(xLabel or x, fontsize=8)
     ax.set_ylabel(yLabel or y, fontsize=8)
     ax.tick_params(axis="both", labelsize=6)
+    ax.invert_yaxis()  # Invert y-axis if you want higher values at the top (common in football stats)
 
     ax.grid(False)
     ax.spines["top"].set_visible(False)

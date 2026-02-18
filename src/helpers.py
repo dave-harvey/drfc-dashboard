@@ -4,14 +4,14 @@ from typing import Union
 
 
 def data_source_caption(
-    source: str = "FotMob",
+    source: str = "WyScout",
 ):
     """
     Render a standardised data source caption.
 
     Args:
-        source: Data source name (default: FotMob)
+        source: Data source name (default: WyScount)
     """
     st.caption(
-        f"Data reflects matches played up to and including 08 Feb 2026 (source: {source})."
+        f"Analysis reflects matches played up to and including 17 Feb 2026. Match statistics used for this analysis were sourced from {source}."
     )

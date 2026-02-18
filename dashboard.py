@@ -33,3 +33,8 @@ with tabs[3]:
 with tabs[4]:
     outcomes.render()
 
+
+st.caption("")
+st.caption(
+    "This website is an independent analytical project and is not affiliated with any clubs, leagues, or data providers."
+)
