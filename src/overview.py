@@ -55,11 +55,11 @@ def render():
             st.markdown(
                 """
                 Where plot charts are used, they are divided into four quadrants.
-                The <span style="color:#00cc44; font-weight:600;">bottom-right</span> generally indicates the
+                The <span style="color:#00cc44; font-weight:600;">top-right</span> generally indicates the
                 strongest position, combining positive attacking output with solid defensive performance.
-                The <span style="color:#00cc44; font-weight:600;">top-right</span> and
-                <span style="color:#00cc44; font-weight:600;">bottom-left</span> can still represent effective
-                styles, while the <span style="color:#00cc44; font-weight:600;">top-left</span> typically
+                The <span style="color:#00cc44; font-weight:600;">top-left</span> and
+                <span style="color:#00cc44; font-weight:600;">bottom-right</span> can still represent effective
+                styles, while the <span style="color:#00cc44; font-weight:600;">bottom-left</span> typically
                 highlights teams struggling at both ends of the pitch.
                 </p>
                 """,
