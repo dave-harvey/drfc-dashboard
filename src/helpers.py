@@ -13,5 +13,6 @@ def data_source_caption(
         source: Data source name (default: WyScount)
     """
     st.caption(
-        f"Analysis reflects matches played up to and including 17 Feb 2026. Match statistics used for this analysis were sourced from {source}."
+        f"Analysis reflects matches played up to and including 17 Feb 2026. Match statistics used for this analysis were sourced from {source}. " +
+        f"This website is an independent analytical project and is not affiliated with any clubs, leagues, or data providers."
     )
